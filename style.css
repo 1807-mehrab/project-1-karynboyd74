@@ -1,0 +1,188 @@
+body {
+	background: #FDEECD;
+	font-family: Arial, Gadget, sans-serif;
+}
+
+#grid {
+		display: grid;
+		/* # columns = x ; # col lines = x + 1 so I have 9 col lines which means I have 8 cols */
+		grid-template-columns: repeat(12, 1fr);
+		/* same thing for rows; # rows = y; # row lines = y + 1 */
+		grid-auto-rows: repeat(12, 2fr); 
+		/* grid-column-gap: 5px;
+		grid-row-gap: 3px; 
+		max-width: 960px; */
+		margin: 0 auto;
+	}
+	
+#header {
+	display: grid;
+	grid-column: 1 / 13;
+	grid-row: 1 / 2;
+	/* border: 3px solid blue; */
+}
+	/* nested within header */
+	#logo {
+		grid-column: 1 / 2;
+		grid-row: 1 / 1;
+		/* border: 3px dotted purple; */
+	}
+	
+		#logo img {
+			width: 35%;
+			height: 35%;
+		}
+	
+	#welcome {
+		grid-column: 2 / 13;
+		grid-row : 1 / 2;
+		/* border: 3px dotted pink; */
+	}
+	
+		#welcome h1 {
+			color: #419579; 
+			/* background: #7FC7AF; */
+		}
+	
+#navbar {
+	grid-column: 1 / 13;
+	grid-row: 2 / 3;
+	/* border: 3px solid gray; */
+}
+	#navbar li {
+		float: right;
+	}
+	
+	#navbar li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	
+	#navbar li a:hover {
+		background-color: #111;
+	}
+	
+	#navbar .active {
+		background-color: #F38630;
+	}
+	
+	#navbar ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #419579;
+	}
+
+#sidebar {
+	grid-column: 1 / 2;
+	grid-row: 3 / 12;
+	background-color: #419579;
+	color: white;
+	/* border: 3px solid orange; */
+}
+
+	/* nested within sidebar */
+	#services {
+		display:grid;
+		grid-column: 1 / 2;
+		grid-row: 3 / 6;
+	}
+		/* nested within services */
+		#boarding {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+		
+		#daycare {
+			grid-column: 1 / 2;
+			grid-row: 4 / 5;
+		}
+		
+		#grooming {
+			grid-column: 1 / 2;
+			grid-row: 5 / 6;
+		}
+	
+	#calendar {
+		grid-column: 1 / 2;
+		grid-row: 6 / 9;
+	}
+	
+	#address {
+		display: grid;
+		grid-column:  1 / 2;
+		grid-row: 9 / 12;
+	}
+		/* still fiddling with these - the map icon is GINORMOUS!
+		#address .icon {
+			grid-column: 1 / 1;
+			grid-row: 9 / 12;
+			height: 25px;
+			width: 25px;
+		}
+		
+		#address #info {
+			grid-column: 2 / 2;
+			grid-row: 9 / 12;
+		} */
+
+#dashboard {
+	display: grid;
+	grid-column: 2 / 13;
+	grid-row: 3 / 12;
+	/* border: 3px solid green; */
+}
+
+	/* nested within dashboard - use these with innerHTML to set up for host/guest - may need to change names once we connect to DB */
+	#profile {
+		/* upper left **/
+		grid-column: 3 / 8;
+		grid-row: 3 / 6;
+	}
+	
+	#todo {
+		/* upper right */
+		grid-column: 8 / 13;
+		grid-row: 3 / 6;
+	}
+	
+	#reservations {
+		/* bottom left */
+		grid-column: 3 / 8;
+		grid-row: 6 / 12;
+	}
+	
+	#messages {
+		/* bottom right */
+		grid-column: 8 / 13;
+		grid-row: 6 / 12;
+	}
+
+#footer {
+	display: grid;
+	grid-column: 1 / 13;
+	grid-row: 12 / 13;
+	background-color: #419579;
+	color: white;
+	/* border: 3px solid orange; */
+}
+	
+	/* nested inside of footer */
+	#social {
+		grid-column: 1 / 3;
+		grid-row: 12 / 13;
+	}
+	
+	#menu {
+		grid-column:  3 / 12;
+		grid-row: 12 / 13;
+	}
+	
+	#legal {
+		grid-column: 12 / 13;
+		grid-row: 12 / 13;
+	}
